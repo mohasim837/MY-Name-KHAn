@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>async await</h1>
+    <script>
+        //executer
+        //promise produce
+        let promise=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                let rollNum=[1,2,3,4,5];
+                resolve(rollNum)
+                //reject('Error while communicating')
+            },2000)
+        });
+        const getBioData=(indexdata)=>{
+            return new Promise((res,rej)=>{
+                setTimeout((indexdata)=>{
+                    let biodata={
+                        name :'wakas',
+                        age:22
+                    }
+                    res(`my rollNUMBER is ${indexdata} my name is ${biodata.name}.and my age is ${biodata.age}`)
+
+                },2000,indexdata)
+
+            })
+        }
+        //promise consume
+//         promise.then((rollNum)=>{
+//             console.log(rollNum);
+//             return getBioData(rollNum[1]);
+
+//         }).then((kuchBhi)=>{
+//             console.log(kuchBhi)
+//         }).catch((error)=>{
+// console.log(error)
+//         })
+
+
+//async await
+
+  async function getData(){
+    let rollnodata =await promise;
+    console.log(rollnodata);
+      const biodatas       =await getBioData();
+      console.log(biodatas)
+
+   }
+   getData();
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promisesss</h1>
+    <script>
+//         const count = true;
+
+// let countValue = new Promise(function (resolve, reject) {
+//     if (count) {
+//         resolve("There is a count value.");
+//     } else {
+//         reject("There is no count value");
+//     }
+// });
+
+// console.log(countValue);
+
+
+
+
+
+
+let a=false;
+
+    let promise=new Promise((res,rej)=>{
+if(a){
+    res(a);
+
+}else{
+    rej(`this is a an error`)
+}
+    });
+
+
+    promise.then(()=>{
+        console.log("good wworking bro")
+    }).catch((error)=>{
+console.log(error)
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Call Back Hell</h1>
+    <script>
+
+        // let getRollNo=()=>{
+        //  setTimeout(()=>{
+        //  console.log(("Api getting Roll No"));
+        //  let RollNo=[1,2,3,4,5];
+        //  console.log(RollNo);
+
+        //  setTimeout((x)=>{
+        //     let BioData={
+        //         name:"asim khan",
+        //         age:26
+        //     }
+        //     console.log(`my name is ${BioData.name}.and my age is ${BioData.age}.and my rollNo is ${x}`)
+            
+        //     setTimeout(()=>{
+        //       BioData.gender="Male";
+        //       console.log(` i am a ${BioData.gender}`)
+        //     },2000,BioData.name)
+
+        //  },2000,RollNo[1]);
+
+
+        //  },2000)
+        // };
+        // getRollNo();
+
+                // const getRollNo=()=>{
+                //     setTimeout(()=>{
+                //         console.log("API getting");
+                //         let roll=[1,2,3,4];
+                //         console.log(roll)
+
+                //         setTimeout((age)=>{
+                         
+
+                //             setTimeout(()=>{
+                //                 let Bio={
+                //                     name:'ali',
+                //                     age:22
+                //                 }
+
+                //                 console.log(`my name is ${Bio.name}.and my age is ${Bio.age}.and my roll No is ${age}`)
+                //             },2000)
+
+                //         },2000,roll[1]);
+
+                //     },2000)
+
+                // }
+                // getRollNo();
+
+
+
+
+
+                // let getData=()=>{
+              
+                //   setTimeout(()=>{
+                //     console.log("My Name Is Khan");
+                //     let roll_no=[1,2,3,4];
+                //     console.log(roll_no);
+                //     setTimeout((roll)=>{
+                //         console.log(`my roll num is ${roll}`);
+                //         setTimeout((nam) => {
+                //             let data={
+                //                 name:'ali',
+                //                 age:33
+                //             }
+                //             console.log(`my name is ${data.name}`)
+                            
+                //         }, 3000);
+
+                //     },3000,roll_no[1])
+
+                //   },2000)
+                // }
+                // getData();
+    
+      
+
+
+                let hello=()=>{
+                    setTimeout(()=>{
+                        console.log("API Fetching");
+                        let rolno=[1,2,3,4,5];
+                        console.log(rolno);
+                        setTimeout((roll)=>{
+                            console.log(`my ROLL NUMBER is ${roll}`);
+                            setTimeout(()=>{
+                                let data={
+                                    name :"ASIM",
+                                    age:22
+                                }
+                                console.log(`my name is ${data.name}.and my age is ${data.age}`);
+
+                                setTimeout(()=>{
+                                    data.gender='male';
+                                    console.log(`${data.gender}`)
+
+                                },2000)
+                            },2000)
+
+                        },2000,rolno[2])
+                    },2000);
+                }
+                hello();
+
+    </script>
+</body>
+</html>
